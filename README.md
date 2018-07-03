@@ -21,6 +21,8 @@ Configure the service to automatically start when Windows boots (the **space** a
 sc.exe config AuraSense start= auto
 ```
 
+### Uninstalling
+
 To uninstall and return control back to the hardware default:
 ```
 AuraSense.exe -unregserver
