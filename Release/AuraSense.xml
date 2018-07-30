@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<Settings>
+	<BaseRate value="30" />				<!-- affects base pulse rate when cpu usage == 0, higher values increase base pulse rate, 10 to 120 generally work -->
+	<ScaleRate value="6000" />			<!-- affects overall pulse rate at both ends of cpu usage (0-256), higher values slow down pulse rate -->
+	<MinBright value="8" />				<!-- minimum brightness, 0 to MaxBright -->
+	<MaxBright value="248" />			<!-- maximum brightness, MinBright to 256 -->
+	<ColorSmooth value="200" />			<!-- average of last x cpu polls, 1 to 200 generally work -->
+	<PulseSmooth value="200" />			<!-- average of last x cpu polls, 1 to 200 generally work -->
+	<FrameTime value="33" />			<!-- rough time in milliseconds between frames, lower values use more cpu time, higher values are not as smooth, 16 to 64 generally work -->
+	<Color0	  r="0"   b="0" g="255" />	<!-- color when cpu usage = 0 -->
+	<Color100 r="255" b="0" g="0" />	<!-- color when cpu usage = 100 -->
+</Settings>
