@@ -28,6 +28,9 @@
     <ClCompile Include="AuraSense_i.c">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="tinyxml2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
