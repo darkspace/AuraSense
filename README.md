@@ -16,12 +16,22 @@ Place AURA_SDK.DLL, AuraSense.xml, and AuraSense.exe in the same folder of your 
 AuraSense.exe -service
 ```
 
-Configure the service to automatically start when Windows boots (the **space** after "start=" is important):
+Configure the service to automatically start when Windows boots (the **space** after "start=" is critical):
 ```
 sc.exe config AuraSense start= auto
 ```
 
+To start AuraSense service:
+```
+sc.exe start AuraSense
+```
+
 Any errors on service startup are logged to the Windows Event log.
+
+To stop AuraSense service:
+```
+sc.exe stop AuraSense
+```
 
 ### Uninstalling
 
