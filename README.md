@@ -1,6 +1,6 @@
 # AuraSense
 
-A Windows service to turn the Asus Aura LED into a soothing CPU usage indicator.  At 0% usage LEDs slowly pulsate green.  As CPU load increases, LEDs pulsate quicker and transition to full red at 100%.  Handles resume from sleep properly.  The service itself uses roughly 1% CPU.
+A Windows service to turn the Asus Aura LED into a soothing CPU usage indicator.  At 0% usage LEDs slowly pulsate green.  As CPU load increases, LEDs pulsate quicker and transition to full red at 100%.  Handles resume from sleep properly.  The service itself uses less than 1% CPU.
 
 ### Prerequisites
 
@@ -13,7 +13,7 @@ First, if you have the official Asus Aura Sync Utility installed, you will need 
 
 Place AURA_SDK.DLL, AuraSense.xml, and AuraSense.exe in the same folder of your choosing.  A prebuilt exe is located under the Release folder.  Open an Administrator command prompt to install as a service:
 ```
-AuraSense.exe -service
+./AuraSense.exe -service
 ```
 
 Configure the service to automatically start when Windows boots (the **space** after "start=" is critical):
@@ -37,14 +37,14 @@ sc.exe stop AuraSense
 
 To uninstall and return control back to the hardware default:
 ```
-AuraSense.exe -unregserver
+./AuraSense.exe -unregserver
 ```
 
 ### Debugging
 
 Before debugging in Visual Studio, register it as a regular server:
 ```
-AuraSense.exe -regserver
+./AuraSense.exe -regserver
 ```
 
 ### Configuration
